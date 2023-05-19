@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        //metodo burbuja
+        const arreglo = [23, 7, 4, 82, 56, 222, 9, 1, 45, 90, 67];
+
+        const MetodoBurbuja = arreglo => {
+            const l = arreglo.length;
+            for (let i = 0; i < l; i++) {
+                for (let j = 0; j < l - 1 - i; j++) {
+                    if (arreglo[j] > arreglo[j + 1]) {
+                        [arreglo[j], arreglo[j + 1]] = [arreglo[j + 1], arreglo[j]];
+                    }
+                }
+            }
+
+            return arreglo;
+        };
+        const resultado = MetodoBurbuja(arreglo);
+        resultado;
+        
+
+        //Metodo de insercion
+        const MetodoInsercion = arreglo => {
+            const l = arreglo.length;
+            let j, temporal;
+            for (let i = 1; i < l; i++) {
+                j = i;
+                temporal = arreglo[i];
+                while (j > 0 && arreglo[j - 1] > temporal) {
+                    arreglo[j] = arreglo[j - 1];
+                    j--;
+                }
+                arreglo[j] = temporal;
+            }
+            return arreglo;
+        };
+        const arreglo = [134, 76, 102, 35, 657, 32, 3, 1, 5, 100];
+        const resultadoInsercion = MetodoInsercion(arreglo);
+
+        resultadoInsercion;
+        
+
+        //Metodo de Selecion
+        const metodoSeleccion = arr => {
+            for (let j = 0; j < arr.length; ++j) {
+                let i = iMin = j;
+                for (++i; i < arr.length; ++i) {
+                    (arr[i] < arr[iMin]) && (iMin = i);
+                }
+                [arr[j], arr[iMin]] = [arr[iMin], arr[j]];
+            }
+            return arr;
+        }
+        const arr = [10, 4, 40, 31, 65, 1];
+        const resultado = metodoSeleccion(arr);
+        resultado;
+        
+
+        //Metodo Shell
+        const shellSort = arr => {
+            const gaps = [5, 3, 1];
+            for (let g = 0; g < gaps.length; ++g) {
+                for (let i = gaps[g]; i < arr.length; ++i) {
+                    const temp = arr[i];
+                    let j = i;
+                    for (; j >= gaps[g] &&
+                        arr[j - gaps[g]] > temp;
+                        j -= gaps[g]) {
+                        arr[j] = arr[j - gaps[g]];
+                    }
+                    arr[j] = temp;
+                }
+            }
+            return arr;
+        }
+        const arr = [45, 765, 345, 23, 8, 1];
+        const result = shellSort(arr);
+        result;
+        
+
+        //Metodo Merge
+        const metodo_merge = arreglo => {
+            if (arreglo.length < 2) {
+                return arreglo;
+            }
+            const middle = parseInt(arreglo.length / 2) | 0;
+            const left = arreglo.slice(0, middle);
+            const right = arreglo.slice(middle);
+            const merge = (left, right) => {
+                const result = [];
+                let il = ir = 0;
+                while (il < left.length && ir < right.length) {
+                    result.push((left[il] < right[ir]) ? left[il++] : right[ir++]);
+                }
+                return [...result, ...left.slice(il), ...right.slice(ir)];
+            }
+            return merge(metodo_merge(left), metodo_merge(right));
+        }
+        const arreglo = [10, 4, 40, 32, 67, 12, 43, 31, 65, 1];
+        const result = metodo_merge(arreglo);
+        resultado;
+        
+
+
+        //Metodo Quick
+        const metodo_quick = ([x = [], ...xs]) => {
+            return (x.length === 0) ? [] : [
+                ...metodo_quick(xs.filter(y => y <= x)),x,
+                ...metodo_quick(xs.filter(y => y > x))
+            ];
+        }
+        const arreglo = [10, 4, 40, 31, 65, 19];
+        const resultado = metodo_quick(arreglo);
+        resultado;
+        
+        //Metodo Heap
+        const buildMaxHeap = (arr) => {
+            let i = Math.floor(arr.length / 2 - 1);
+            while (i >= 0) {
+                heapify(arr, i, arr.length);
+                i -= 1;
+            }
+        }
+
+        const heapify = (heap, i, max) => {
+            let index;
+            let leftChild;
+            let rightChild;
+            while (i < max) {
+                index = i; 
+                leftChild = 2 * i + 1;            
+                rightChild = leftChild + 1;
+                if (leftChild < max && heap[leftChild] > heap[index]) {
+                    index = leftChild;
+                } 
+                if (rightChild < max && heap[rightChild] > heap[index]) {
+                    index = rightChild;
+                }  
+                if (index === i) {
+                    return;
+                }
+                swap(heap, i, index);
+                i = index;
+            }
+        }
+
+        const swap = (arr, firstItemIndex, lastItemIndex) => {
+            const temp = arr[firstItemIndex];
+            arr[firstItemIndex] = arr[lastItemIndex];
+            arr[lastItemIndex] = temp;
+        }
+
+        const heapSort = (arr) => {           
+            buildMaxHeap(arr);          
+            lastElement = arr.length - 1;  
+            while (lastElement > 0) {
+                swap(arr, 0, lastElement);
+                heapify(arr, 0, lastElement);
+                lastElement -= 1;
+            }          
+            return arr;
+        }
+
+        const arreglo= [2,34,76,4,89,345,5]
+        console.log(heapSort(arreglo))
+        */
+
+        //Metodo Comb
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
